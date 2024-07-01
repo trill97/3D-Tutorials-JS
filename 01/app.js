@@ -34,4 +34,10 @@ scene.add(light);
 const advancedMaterial = new THREE.MeshPhongMaterial({ color: 0x00ff00 });
 cube.material = advancedMaterial;
 
+// Rotate the cube with mouse movement
+document.addEventListener('mousemove', (event) => {
+    cube.rotation.x = (event.clientY / window.innerHeight) * 2 * Math.PI;
+    cube.rotation.y = (event.clientX / window.innerWidth) * 2 * Math.PI;
+});
+
 animate();
