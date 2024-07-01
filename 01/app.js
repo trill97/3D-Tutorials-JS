@@ -25,4 +25,13 @@ function animate() {
     renderer.render(scene, camera);
 }
 
+// Add a light
+const light = new THREE.PointLight(0xffffff);
+light.position.set(10, 10, 10);
+scene.add(light);
+
+// Replace the material with a more complex one
+const advancedMaterial = new THREE.MeshPhongMaterial({ color: 0x00ff00 });
+cube.material = advancedMaterial;
+
 animate();
