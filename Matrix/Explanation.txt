@@ -1,0 +1,16 @@
+HTML:
+
+The body is styled to have no margin, hide overflow, and have a black background with green, monospace text.
+A canvas element with the id matrix is added to the body.
+
+
+JavaScript:
+
+The canvas is selected and its context (ctx) is retrieved.
+The canvas dimensions are set to the window's inner width and height.
+An array of 256 elements is created and filled with the number "1". This array will be used to store the y-positions of the falling characters.
+The draw function:
+Fills the entire canvas with a semi-transparent black color to create the trailing effect.
+Fills the text with green color (#0F0).
+Maps through each element in the letters array, drawing a random character at the corresponding x and y positions.
+Updates the y-position of each character. If a character moves beyond the bottom of the canvas, its position is reset to the top.
